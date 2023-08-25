@@ -1,0 +1,87 @@
+ <p-breadcrumb class="max-w-full" [model]="items" [home]="home"></p-breadcrumb>
+
+
+ 
+
+ 
+
+
+
+ 
+ 
+ <div class="d-flex flex-wrap justify-content-center my-1">    
+    <button type="button"(click)="showDiv(1)"class="btn btn-primary  my-1 mx-4" pButton icon="pi pi-external-link" label="Hookah"></button>
+    <button type="button" (click)="showDiv(2)" class="btn btn-primary  my-1  mx-4" pButton icon="pi pi-external-link" label="Food"></button>
+    <button type="button"  (click)="showDiv(3)"class="btn btn-primary  my-1 mx-4"  pButton icon="pi pi-external-link" label="Drinks"></button>
+    <button type="button"  (click)="showDiv(3)"class="btn btn-primary  my-1 mx-4"  pButton icon="pi pi-external-link" label="Drinks"></button>
+
+</div>
+
+<div class="card" *ngIf="showDiv1" >
+
+    
+    <p-carousel       [value]="products"  [numVisible]="3"  [circular]="true" [responsiveOptions]="responsiveOptions">
+        <ng-template let-product pTemplate="item">
+            <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+                <div class="mb-3">
+                    <img   style="max-width: 100%;
+                    height: auto;"  src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" 
+                    [alt]="product.name" class="w-6 shadow-2" />
+                </div>
+                <div>
+                    <h4 class="mb-1">{{ product.name }}</h4>
+                    <h6 class="mt-0 mb-3">{{ '$' + product.price }}</h6>
+                     <div class="car-buttons mt-5">
+                        <span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, accusamus dolorum, mollitia fugiat eligendi laudantium enim facilis impedit ipsum temporibus harum est quis! Praesentium eum ipsum quos rem! Vel, tempore?</span>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+</div> 
+ 
+<div class="card" *ngIf="showDiv2" >
+
+    
+    <p-carousel       [value]="products" [numVisible]="3"    [circular]="true" [responsiveOptions]="responsiveOptions">
+        <ng-template let-product pTemplate="item">
+            <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+                <div class="mb-3">
+                    <img   style="max-width: 100%;
+                    height: auto;"  src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" 
+                    [alt]="product.name" class="w-6 shadow-2" />
+                </div>
+                <div>
+                    <h4 class="mb-1">{{ product.name }}</h4>
+                    <h6 class="mt-0 mb-3">{{ '$' + product.price }}</h6>
+                     <div class="car-buttons mt-5">
+                        <span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, accusamus dolorum, mollitia fugiat eligendi laudantium enim facilis impedit ipsum temporibus harum est quis! Praesentium eum ipsum quos rem! Vel, tempore?</span>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+</div> 
+<div class="card" *ngIf="showDiv3" >
+
+    
+    <p-carousel       [value]="products"  [numVisible]="3"    [circular]="true" [responsiveOptions]="responsiveOptions">
+        <ng-template let-product pTemplate="item">
+            <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+                <div class="mb-3">
+                    <img   style="max-width: 100%;
+                    height: auto;"  src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" 
+                    [alt]="product.name" class="w-6 shadow-2" />
+                </div>
+                <div>
+                    <h4 class="mb-1">{{ product.name }}</h4>
+                    <h6 class="mt-0 mb-3">{{ '$' + product.price }}</h6>
+                     <div class="car-buttons mt-5">
+                        <span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, accusamus dolorum, mollitia fugiat eligendi laudantium enim facilis impedit ipsum temporibus harum est quis! Praesentium eum ipsum quos rem! Vel, tempore?</span>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+</div> 
+ 
